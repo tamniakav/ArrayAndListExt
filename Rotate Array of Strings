@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace P01.RotateArrayOfStrings
+{
+    class RotateArrayOfStrings
+    {
+        static void Main(string[] args)
+        {
+            string[] strArr = Console.ReadLine().Split();
+
+            string word = strArr[strArr.Length - 1];
+
+            for (int i = strArr.Length - 2; i >= 0; i--)
+            {
+                strArr[i + 1] = strArr[i];
+            }
+
+            strArr[0] = word;
+
+            Console.WriteLine(string.Join(" ", strArr));
+        }
+    }
+}
